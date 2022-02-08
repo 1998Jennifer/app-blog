@@ -22,3 +22,5 @@ Route::post('users', 'UserController@store')->name('users.store');
 //Metodo para borrar
 Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+// Crea 7 rutas posibles- con middleware proteges las 7 rutas
+Route::resource('user', UserController::class)->middleware('auth');
