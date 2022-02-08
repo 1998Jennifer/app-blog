@@ -16,11 +16,19 @@
 //     // return 'HOLA';
 // });
 //Esta ruta los lista
-Route::get('/', 'UserController@index');
+// Route::get('/', 'UserController@index');
 //Metodo para guardar a los usuarios
-Route::post('users', 'UserController@store')->name('users.store');
+// Route::post('users', 'UserController@store')->name('users.store');
 //Metodo para borrar
-Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
+// Route::delete('users/{user}', 'UserController@destroy')->name('users.destroy');
 // ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 // Crea 7 rutas posibles- con middleware proteges las 7 rutas
-Route::resource('user', UserController::class)->middleware('auth');
+// Route::resource('user', UserController::class)->middleware('auth');
+
+
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::resource('post', 'PostController');
