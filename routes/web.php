@@ -28,7 +28,7 @@
 
 
 Route::get('/', function () {
-    return view('post');
+    return view('welcome');
 });
 
 Route::post('post', 'PostController@store')->name('posts.store');
